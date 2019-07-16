@@ -40,7 +40,7 @@ byte_for:
 
 	mv s6, t0 # temp copy of checksum. Goal: find the 25th bit's value (from 32 bits)
 	slli s6, s6, 7 # move 7 bits to left
-	srli s6, s6, 31 # move 31 bits to left
+	srli s6, s6, 31 # move 31 bits to right
 
 	beqz s6, end_update_checksum # if bit == 0, do NOT update checksum
 
